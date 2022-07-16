@@ -30,9 +30,9 @@ public class SmsService {
 	@Autowired
 	private SalesRepository saleRepository;
 	
-	public void sendSms(Long saleId) {
+	public void sendSms(Long salesId) {
 		
-		Sale sale = saleRepository.findById(saleId).get();
+		Sale sale = saleRepository.findById(salesId).get();
 		
 		String date = sale.getDate().getMonthValue() + "/" + sale.getDate().getYear();
 		
